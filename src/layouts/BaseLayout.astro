@@ -12,24 +12,20 @@ const { pageTitle } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} >
     <title>{pageTitle}</title>
-        <style>
+    <style>
       h1 {
         color: rgb(0, 0, 0);
         font-size: 4rem;
       }
     </style>
-  </head>
-  <body>
-<Header />
-    <title>{pageTitle}</title>
-  </body>
-</html>
-<body>
-  <h1>Astro</h1>
-  <h1>My Astro Site</h1>
-      <slot />
+ </head>
+ <body>
+  <Header />
+    <main>
+    <h1>{pageTitle}</h1>
+    <slot />
+  </main>
   <Footer />
-  <script>
-    import "../scripts/menu.js";
-  </script>
+  <script type="module" src="/src/scripts/menu.js"></script>
 </body>
+</html>
